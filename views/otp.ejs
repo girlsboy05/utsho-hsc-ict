@@ -1,0 +1,17 @@
+
+<div class="row justify-content-center">
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="card shadow-sm border-0">
+      <div class="card-body">
+        <h1 class="h5 mb-3">Verify OTP</h1>
+        <% if (error) { %><div class="alert alert-danger"><%= error %></div><% } %>
+        <p class="text-muted small">We sent a 6-digit code to <strong><%= mobile %></strong>. It is valid for 5 minutes.</p>
+        <form method="POST" action="/register/verify" class="vstack gap-3">
+          <input type="hidden" name="mobile" value="<%= mobile %>">
+          <div><label class="form-label">Code</label><input name="code" class="form-control" maxlength="6" required></div>
+          <button class="btn btn-danger w-100" style="background:#E82429;border-color:#E82429;">Verify & Complete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+{
+  "name": "utslms",
+  "version": "1.0.4",
+  "private": true,
+  "description": "UTSLMS \u2013 Minimal LMS Node.js App (Express + EJS + Bootstrap)",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.17.3",
+    "node-fetch": "^2.6.7",
+    "uuid": "^9.0.1",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}

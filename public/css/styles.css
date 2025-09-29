@@ -1,0 +1,10 @@
+/* Minimal theme */
+:root{
+  --brand:#E82429;
+  --dark:#1C110D;
+  --white:#FFFFFF;
+}
+.nav-link.active { border-bottom: 2px solid var(--brand); }
+.table thead th { background: var(--dark); color: var(--white); }
+.accordion-button:not(.collapsed){ color:#fff; background-color: var(--brand); }
+.btn-danger { background: var(--brand); border-color: var(--brand); }

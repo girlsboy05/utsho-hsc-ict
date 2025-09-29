@@ -1,0 +1,71 @@
+
+<div class="row justify-content-center">
+  <div class="col-12 col-md-8 col-lg-6">
+    <div class="card shadow-sm border-0">
+      <div class="card-body">
+        <h1 class="h4 mb-3">Registration</h1>
+        <% if (stage === 'start') { %>
+          <form method="POST" action="/register/check" class="vstack gap-3">
+            <div>
+              <label class="form-label">Mobile Number</label>
+              <input type="text" name="mobile" class="form-control" required>
+            </div>
+            <div>
+              <label class="form-label">Date of Birth</label>
+              <input type="date" name="dob" class="form-control" required>
+            </div>
+            <button class="btn btn-danger" style="background:#E82429;border-color:#E82429;">Continue</button>
+          </form>
+        <% } else if (stage === 'blocked') { %>
+          <div class="alert alert-info">Already registered as <strong><%= data.name %></strong>.</div>
+          <a href="/" class="btn btn-outline-secondary">Back to Login</a>
+        <% } else if (stage === 'form') { %>
+          <form method="POST" action="/register/submit" class="vstack gap-3">
+            <input type="hidden" name="mobile" value="<%= data.mobile %>">
+            <input type="hidden" name="dob" value="<%= data.dob %>">
+            <div><label class="form-label">Full Name</label><input name="fullName" class="form-control" required></div>
+            <div>
+              <label class="form-label">Gender</label>
+              <select name="gender" class="form-select" required>
+                <option value="">Select…</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
+            <div>
+              <label class="form-label">College Name</label>
+              <input list="schools" name="school" class="form-control" required>
+              <datalist id="schools"></datalist>
+            </div>
+            <div class="row g-3">
+              <div class="col">
+                <label class="form-label">Batch</label>
+                <select name="batch" class="form-select" required>
+                  <option>HSC 2026</option>
+                  <option>HSC 2027</option>
+                </select>
+              </div>
+              <div class="col">
+                <label class="form-label">Group</label>
+                <select name="group" class="form-select" required>
+                  <option>Science</option>
+                  <option>Business</option>
+                  <option>Humanities</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-danger" style="background:#E82429;border-color:#E82429;">Send OTP</button>
+          </form>
+          <script>
+            fetch('<%= schoolsPath %>').then(r=>r.json()).then(d=>{
+              const dl = document.querySelector('#schools');
+              d.schools.forEach(s=>{
+                const o = document.createElement('option'); o.value = s; dl.appendChild(o);
+              });
+            });
+          </script>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</div>

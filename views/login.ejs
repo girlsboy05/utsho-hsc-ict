@@ -1,0 +1,25 @@
+
+<div class="row justify-content-center">
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="card shadow-sm border-0">
+      <div class="card-body">
+        <h1 class="h4 mb-3" style="color:#1C110D;">Login</h1>
+        <% if (error) { %><div class="alert alert-danger"><%= error %></div><% } %>
+        <form method="POST" action="/login" class="vstack gap-3">
+          <div>
+            <label class="form-label">Mobile Number</label>
+            <input type="text" name="mobile" class="form-control" required>
+          </div>
+          <div>
+            <label class="form-label">Date of Birth</label>
+            <input type="date" name="dob" class="form-control" required>
+          </div>
+          <button class="btn btn-danger w-100" style="background:#E82429;border-color:#E82429;">Login</button>
+        </form>
+        <div class="text-center mt-3">
+          <a class="link-danger" href="/register"><button class="btn border border-danger w-100">এখনো রেজিস্ট্রেশন করো নি❓<br>রেজিস্ট্রেশন করতে এখানে ক্লিক করো❗</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,189 @@
+{
+  "timezone": "Asia/Dhaka",
+  "weeks": {
+    "week0": [
+      {
+		"module": 0,
+        "date": "2025-10-05",
+        "day": "Friday",
+        "time": "20:00",
+        "module_type": "Class",
+        "topic": "Course Orientation"
+      }
+    ],
+    "week1": [
+      {
+		"module": 1.1,
+        "date": "2025-10-06",
+        "day": "Saturday",
+        "time": "21:30",
+        "module_type": "Class",
+        "topic": "ইন্টারনেট এবং ওয়েব পরিচিতি, ওয়েব ডিজাইনের ধারণা, ওয়েব পেজ এবং ওয়েব সাইট, স্ট্যাটিক ওয়েবসাইট, ডাইনামিক ওয়েবসাইট, ক্লায়েন্ট প্রোগ্রাম, সার্ভার প্রোগ্রাম, URL"
+      },
+      {
+		"module": 1.2,
+        "date": "2025-10-07",
+        "day": "Sunday",
+        "time": "21:30",
+        "module_type": "Class",
+        "topic": "ওয়েবসাইটের কাঠামো, ট্যাগ, হাইপারলিঙ্কের কাঠামো, ওয়েবফ্রন্ট বা নেটওয়ার্ক কাঠামো, ডিরেক্টরি কাঠামো, ফাইল কাঠামো, ফাইলের নামকরণ কাঠামো, ডোমেইন কাঠামো, এবং URL পরিচিতি"
+      },
+      {
+		"module": 1.3,
+        "date": "2025-10-08",
+        "day": "Monday",
+        "time": "21:30",
+        "module_type": "Practice",
+        "topic": "Week 01 – Practice 01"
+      },
+      {
+		"module": 1.4,
+        "date": "2025-10-09",
+        "day": "Tuesday",
+        "time": "21:30",
+        "module_type": "Class",
+        "topic": "HTML পরিচিতি ও ডকুমেন্টেশন, সাধারণ HTML কোড, এলিমেন্ট ও ট্যাগ, বিভিন্ন ধরনের Tag, HEAD অংশের ট্যাগসমূহ"
+      },
+      {
+		"module": 1.5,
+        "date": "2025-10-10",
+        "day": "Wednesday",
+        "time": "21:30",
+        "module_type": "Practice",
+        "topic": "Week 01 – Practice 02"
+      },
+      {
+		"module": 1.6,
+        "date": "2025-10-11",
+        "day": "Thursday",
+        "time": "21:30",
+        "module_type": "Assignment",
+        "topic": "Assignment 01"
+      },
+      {
+		"module": 1.7,
+        "date": "2025-10-12",
+        "day": "Friday",
+        "time": "All Day",
+        "module_type": "NoModule",
+        "topic": "No Module Day"
+      }
+    ],
+    "week2": [
+      {
+		"module": 2.1,
+        "date": "2025-10-13",
+        "day": "Saturday",
+        "time": "21:30",
+        "module_type": "Class",
+        "topic": "Body সেকশনের বিভিন্ন ট্যাগসমূহ, Heading ট্যাগ, টেক্সট ফরম্যাটিং ট্যাগ"
+      },
+      {
+		"module": 2.2,
+        "date": "2025-10-14",
+        "day": "Sunday",
+        "time": "21:30",
+        "module_type": "Class",
+        "topic": "Style অ্যাট্রিবিউট & CSS"
+      },
+      {
+		"module": 2.3,
+        "date": "2025-10-15",
+        "day": "Monday",
+        "time": "21:30",
+        "module_type": "Practice",
+        "topic": "Week 02 – Practice 01"
+      },
+      {
+		"module": 2.4,
+        "date": "2025-10-16",
+        "day": "Tuesday",
+        "time": "21:30",
+        "module_type": "Class",
+        "topic": "Hyperlink, ছবি যুক্তকরণ, ছবি ব্যাকগ্রাউন্ড যুক্তকরণ, Ordered & Unordered List"
+      },
+      {
+		"module": 2.5,
+        "date": "2025-10-17",
+        "day": "Wednesday",
+        "time": "21:30",
+        "module_type": "Practice",
+        "topic": "Week 02 – Practice 02"
+      },
+      {
+		"module": 2.6,
+        "date": "2025-10-18",
+        "day": "Thursday",
+        "time": "21:30",
+        "module_type": "Assignment",
+        "topic": "Assignment 02"
+      },
+      {
+		"module": 2.7,
+        "date": "2025-10-19",
+        "day": "Friday",
+        "time": "All Day",
+        "module_type": "NoModule",
+        "topic": "No Module Day"
+      }
+    ],
+    "week3": [
+      {
+		"module": 3.1,
+        "date": "2025-10-20",
+        "day": "Saturday",
+        "time": "21:30",
+        "module_type": "Class",
+        "topic": "টেবিল তৈরি, border অ্যাট্রিবিউট, cellspacing & cellpadding attributes, Border, ফর্ম (Text Box, Radio Button, Check Box, File Input, Submit)"
+      },
+      {
+		"module": 3.2,
+        "date": "2025-10-21",
+        "day": "Sunday",
+        "time": "21:30",
+        "module_type": "Class",
+        "topic": "সেমান্টিক উপাদান, কিছু গুরুত্বপূর্ণ Terminology"
+      },
+      {
+		"module": 3.3,
+        "date": "2025-10-22",
+        "day": "Monday",
+        "time": "21:30",
+        "module_type": "Practice",
+        "topic": "Week 03 – Practice 01"
+      },
+      {
+		"module": 3.4,
+        "date": "2025-10-23",
+        "day": "Tuesday",
+        "time": "21:30",
+        "module_type": "Support",
+        "topic": "Support Day 01"
+      },
+      {
+		"module": 3.5,
+        "date": "2025-10-24",
+        "day": "Wednesday",
+        "time": "21:30",
+        "module_type": "Support",
+        "topic": "Support Day 02"
+      },
+      {
+		"module": 3.6,
+        "date": "2025-10-25",
+        "day": "Thursday",
+        "time": "21:30",
+        "module_type": "Class",
+        "topic": "Final Examination"
+      },
+      {
+		"module": 3.7,
+        "date": "2025-10-26",
+        "day": "Friday",
+        "time": "All Day",
+        "module_type": "Event",
+        "topic": "Result & Celebration Day"
+      }
+    ]
+  }
+}

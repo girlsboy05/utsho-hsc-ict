@@ -1,0 +1,48 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage reports
+coverage/
+*.lcov
+
+# Debug
+.nyc_output/
+
+# Build output
+dist/
+build/
+
+# Environment files
+.env.example
+.env.local
+.env.*.local
+
+# Cache
+.cache/
+.next/
+.nuxt/
+.svelte-kit/
+.tmp/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.swp
