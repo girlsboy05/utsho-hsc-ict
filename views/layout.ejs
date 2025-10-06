@@ -21,8 +21,16 @@
       </button>
       <div id="nav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link <%= (typeof active!=='undefined' && active==='classes'?'active text-danger fw-semibold':'') %>" href="/dashboard">Classes</a></li>
-          <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+          
+
+          <% if (isLoggedIn) { %>
+            <li class="nav-item"><a class="nav-link <%= (typeof active!=='undefined' && active==='classes'?'active text-danger fw-semibold':'') %>" href="/dashboard">Classes</a></li>
+            <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+          <% } else { %>
+            <li class="nav-item"><a class="nav-link <%= (typeof active!=='undefined' && active==='login'?'active text-danger fw-semibold':'') %>" href="/">Login</a></li>
+            <li class="nav-item"><a class="nav-link <%= (typeof active!=='undefined' && active==='register'?'active text-danger fw-semibold':'') %>" href="/register">Register</a></li>
+          <% } %>
+
         </ul>
       </div>
     </div>

@@ -29,6 +29,12 @@ app.use(session({
   cookie: { maxAge: 1000*60*60*12 }
 }));
 
+// middleware to make login state available globally
+app.use((req, res, next) => {
+  res.locals.isLoggedIn = req.session.isLoggedIn || false;
+  next();
+});
+
 const routine = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'routine.2025.json'), 'utf8'));
 
 // Helpers
@@ -46,6 +52,7 @@ function requireAuth(req,res,next){
 
 // Routes
 app.get('/', (req,res)=>{
+  res.locals.active = 'login';
   res.render('login', { error:null, fontUrl: 'https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;600;700&display=swap' });
 });
 
@@ -56,10 +63,12 @@ app.post('/login', (req,res)=>{
     return res.render('login', { error: 'Invalid mobile or date of birth.', fontUrl: 'https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;600;700&display=swap' });
   }
   req.session.user = { name: user.fullName, mobile: user.mobile, roll: user.roll };
+  req.session.isLoggedIn = true;
   res.redirect('/dashboard');
 });
 
 app.get('/register', (req,res)=>{
+  res.locals.active = 'register';
   res.render('register', { stage:'start', data:{}, error:null, schoolsPath:'/public/schools.json', fontUrl: 'https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;600;700&display=swap' });
 });
 

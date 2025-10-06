@@ -32,13 +32,14 @@
   function updateCountdown(){
     const diff = next.start.getTime() - Date.now();
     if (diff <= 0) { countdownEl.textContent = '00:00:00'; return; }
-    const h = Math.floor(diff/3600000);
+    const d = Math.floor(diff/86400000);
+    const h = Math.floor((diff%86400000)/3600000);
     const m = Math.floor((diff%3600000)/60000);
     const s = Math.floor((diff%60000)/1000);
-    countdownEl.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+    countdownEl.textContent = `${String(d).padStart(1,'0')}d ${String(h).padStart(1,'0')}h ${String(m).padStart(1,'0')}m ${String(s).padStart(1,'0')}s`;
   }
   if (next){
-    nextMeta.textContent = `${next.day} ${next.date} • ${next.time} • ${next.topic}`;
+    nextMeta.textContent = `${next.day} ${next.date} • ${next.time2} • ${next.topic}`;
     setInterval(updateCountdown, 1000); updateCountdown();
     nextBtn.addEventListener('click', () => showDetails(next));
   }
@@ -55,7 +56,7 @@
     return `<tr>
       <td>${it.module}</td>
       <td>${it.day}<br>${it.date}</td>
-      <td>${timeTxt}</td>
+      <td>${it.time2}</td>
       <td>${btn}</td>
     </tr>`;
   }
@@ -64,7 +65,7 @@
     const id = 'wk'+idx;
     const header = ['Week 0','Week 1','Week 2','Week 3'][idx];
     const rows = items.map(rowHTML).join('');
-    const table = `<div class="table-responsive"><table class="table align-middle">
+    const table = `<div class="table-responsive text-center"><table class="table table-hover align-middle">
       <thead><tr><th>Module</th><th>Date</th><th>Time</th><th>Details</th></tr></thead>
       <tbody>${rows}</tbody></table></div>`;
     return `<div class="accordion-item">
@@ -102,20 +103,20 @@
   function showDetails(item){
     const body = document.getElementById('modalBody');
     const foot = document.getElementById('modalFooter');
-    body.innerHTML = `<div><div class="fw-semibold">${item.topic}</div><div class="small text-muted">${item.day} ${item.date} • ${item.time}</div></div>`;
+    body.innerHTML = `<div><div class="fw-semibold">${item.topic}</div><div class="small text-muted">${item.day} ${item.date} • ${item.time2}</div></div>`;
     foot.innerHTML = '';
     const btn = document.createElement('a');
     btn.className = 'btn btn-danger';
     if (item.module_type === 'Class'){
       btn.textContent = 'Join Class (Google Meet)';
-      btn.href = 'https://meet.google.com/'; btn.target='_blank';
+      btn.href = `${item.link}`; btn.target='_blank';
       const mat = document.createElement('a');
       mat.className='btn btn-outline-secondary'; mat.textContent='Materials (Google Drive)';
-      mat.href='https://drive.google.com/'; mat.target='_blank';
+      mat.href= `${item.mlink}`; mat.target='_blank';
       foot.appendChild(btn); foot.appendChild(mat);
     } else if (item.module_type === 'Practice' || item.module_type === 'Assignment'){
       btn.textContent = 'Open Task (Google Forms)';
-      btn.href = 'https://forms.google.com/'; btn.target='_blank';
+      btn.href = `${item.mlink}`; btn.target='_blank';
       const marks = document.createElement('span');
       marks.className='ms-2 align-self-center';
       marks.textContent = 'Marks: ongoing';
